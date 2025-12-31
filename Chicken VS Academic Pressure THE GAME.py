@@ -651,7 +651,7 @@ def idle():
                 closest_enemy = e # Here we determine which enemy is the closest to us
 
         if closest_enemy:
-            rotation_speed = 1  # Degrees per frame
+            rotation_speed = 3  # Degrees per frame
             body_angle += rotation_speed
             if body_angle >= 360:
                 body_angle -= 360
@@ -920,13 +920,13 @@ def showScreen():
         for i in range(3): 
             if i == 0:
                 glColor3f(0.6, 0.8, 1)  
-                radius = 20+ random.uniform(-1, 1)
+                radius = 20+ random.uniform(-10, 1)
             elif i == 1:
                 glColor3f(0.3, 0.6, 1) 
                 radius = 30+ random.uniform(-10, 10)
             else:
                 glColor3f(0.0, 0.3, 1)  #
-                radius = 40 + random.uniform(-100, 100)
+                radius = 40 + random.uniform(-10, 100)
             glutSolidSphere(radius, 12, 12)
         glPopMatrix()
 
@@ -1029,4 +1029,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
